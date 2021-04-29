@@ -83,13 +83,13 @@ With the HDK MCU in bootloader mode (After the usb activity in the logs stops) t
 Use the `dfu-programmer` utility to upload the new firmware (replace 'firmware.hex' with the name of the file that was downloaded earlier):
 
 ```bash
-dfu-programmer atxmega256a3bu flash --force --suppress-bootloader-mem firmware.hex
+dfu-programmer atxmega256a3bu flash --suppress-bootloader-mem firmware.hex
 ```
 
 Reboot the HDK MCU to normal operation using the new firmware:
 
 ```bash
-dfu-programmer atxmega256a3bu launch
+dfu-programmer atxmega256a3bu start
 ```
 **Note: The device should again disconnect and reconnect.  The device is ready to use once the logs stop.**
 
